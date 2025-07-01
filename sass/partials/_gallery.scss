@@ -1,0 +1,68 @@
+.gallery {
+    position: relative;
+
+    h2 {
+        @include green_subtitle;
+    }
+
+    .layout {
+        padding: 90px 94px 90px 0;
+        display: flex;
+        justify-content: flex-end;
+        gap: 65px;
+
+        .gallery__info {
+            max-width: 524px;
+            width: 100%;
+
+            h3 {
+                @include brown_title;
+            }
+
+            h2 {
+                margin-top: 18px;
+            }
+
+            .gallery__product {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+
+                h5 {
+                    @include green_small_text;
+                    font-weight: 500;
+                }
+
+                hr {
+                    max-width: 326px;
+                    width: 100%;
+                    border: 1px solid #dee2bd;
+                }
+
+                p {
+                    @include brown_title;
+                    font-size: 18px;
+                    line-height: 0%;
+                    margin-bottom: 0;
+
+                }
+
+            }
+
+            p.gallery__product-description {
+                @include green_small_text;
+            }
+        }
+    }
+
+    .gallery__quote {
+        text-align: center;
+    }
+
+    .gallery__img-leaf {
+        position: absolute;
+        top: 40%;
+        left: -8%;
+    }
+}
