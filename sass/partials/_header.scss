@@ -1,0 +1,65 @@
+header {
+	@include box;
+
+	.layout {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		nav {
+			ul {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 40px;
+
+				a {
+					@include simple_text;
+					display: block;
+				}
+			}
+		}
+
+		.logo {
+			a {
+				position: relative;
+				display: block;
+			}
+
+			.sr_only {
+
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border: 0;
+
+			}
+		}
+
+		.btn_box {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 45px;
+
+			.buy_box {
+				button {
+					@include simple_text;
+					background: none;
+					display: flex;
+					align-items: center;
+					gap: 12px;
+				}
+			}
+
+			.btn_tea {
+				@include button_green;
+			}
+		}
+	}
+}

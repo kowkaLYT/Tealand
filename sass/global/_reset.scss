@@ -1,0 +1,88 @@
+// Zer0
+* {
+    position: relative;
+    box-sizing: border-box;
+    z-index: 0;
+
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+
+    background-image: none;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+
+    overflow: visible;
+    overflow-wrap: normal;
+    word-break: normal;
+
+    user-select: none;
+
+    list-style-type: none;
+
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1em;
+
+    &,
+    &::after,
+    &::before {
+        transition: all .3s linear 0s;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a,
+button,
+input,
+textarea,
+form {
+    color: #000;
+    text-decoration: none;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+span {
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: clip;
+}
+
+[aria-hidden="true"] {
+    visibility: hidden;
+}
+
+/*
+@media (min-width: 1921px){}
+@media (width: 1920px){}
+@media (min-width: 1440px) and (max-width: 1919px) {}
+@media (min-width: 1360px) and (max-width: 1439px) {}
+@media (min-width: 1280px) and (max-width: 1359px) {}
+@media (min-width: 1024px) and (max-width: 1279px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 375px) and (max-width: 767px) {}
+@media (min-width: 320px) and (max-width: 374px) {}
+*/
+/*
+@media (max-width: 1919px) {}
+@media (max-width: 1439px) {}
+@media (max-width: 1279px) {}
+@media (max-width: 767px) {}
+*/

@@ -1,0 +1,25 @@
+#wrapper,
+main,
+#content,
+#sidebar,
+aside,
+section {
+	@include box;
+}
+
+
+
+.background {
+	min-height: 100%;
+	background-image: url('../images/img-home-bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	gap: 115px;
+}
+
+.layout {
+	padding: 24px 64px;
+}

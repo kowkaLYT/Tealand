@@ -1,0 +1,116 @@
+.advantages {
+    @include box;
+    padding: 100px;
+
+    .layout {
+        display: flex;
+        flex-direction: column;
+        gap: 94px;
+
+        .about_advantages {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            gap: 108px;
+
+            .tea_group {
+                display: block;
+                position: relative;
+
+                .tea_cup {
+                    z-index: 1000;
+                    position: relative;
+                    margin-left: 10%;
+                }
+
+                .tea_leaf {
+                    position: absolute;
+
+                }
+
+                .tea_leaf:nth-child(2) {
+                    bottom: 24%;
+                    right: 52%;
+                }
+
+                .tea_leaf:nth-child(3) {
+                    bottom: 16%;
+                    right: 52%;
+                }
+            }
+
+            .info_advantages {
+                h3 {
+                    @include brown_title;
+                }
+
+                h2 {
+                    @include green_subtitle;
+                    margin-bottom: 36px;
+                }
+
+                p {
+                    color: #333333;
+                    font-family: 'Roboto';
+                    font-size: 20px;
+                    font-weight: 300;
+                    line-height: 30px;
+                    max-width: 650px;
+                    margin-bottom: 40px
+                }
+
+                button {
+                    @include button_green;
+                }
+            }
+
+        }
+
+        .why-us_advantages {
+            margin: 0 auto;
+            text-align: center;
+
+            h3 {
+                @include brown_title;
+                margin-bottom: 28px;
+            }
+
+            h2 {
+                @include green_subtitle;
+                margin-bottom: 32px;
+            }
+
+            p {
+                color: #333333;
+                font-family: 'Roboto';
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 30px;
+                margin-bottom: 48px;
+            }
+
+            .group_advangtages {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                .item_advantages {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 48px;
+                    flex-wrap: wrap;
+                }
+
+                p {
+                    color: #7d806a;
+                    font-family: 'Philosopher';
+                    font-size: 30px;
+                    font-weight: 700;
+                    line-height: 34px;
+                }
+            }
+        }
+    }
+}

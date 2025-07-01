@@ -1,0 +1,492 @@
+/* SCSS Compiled */
+* {
+  position: relative;
+  box-sizing: border-box;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background-image: none;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+  overflow: visible;
+  overflow-wrap: normal;
+  word-break: normal;
+  -webkit-user-select: none;
+          user-select: none;
+  list-style-type: none;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1em;
+}
+*, *::after, *::before {
+  transition: all 0.3s linear 0s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+button,
+input,
+textarea,
+form {
+  color: #000;
+  text-decoration: none;
+  border: none;
+}
+a:hover,
+button:hover,
+input:hover,
+textarea:hover,
+form:hover {
+  cursor: pointer;
+}
+
+span {
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  overflow: clip;
+}
+
+[aria-hidden=true] {
+  visibility: hidden;
+}
+
+/*
+@media (min-width: 1921px){}
+@media (width: 1920px){}
+@media (min-width: 1440px) and (max-width: 1919px) {}
+@media (min-width: 1360px) and (max-width: 1439px) {}
+@media (min-width: 1280px) and (max-width: 1359px) {}
+@media (min-width: 1024px) and (max-width: 1279px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 375px) and (max-width: 767px) {}
+@media (min-width: 320px) and (max-width: 374px) {}
+*/
+/*
+@media (max-width: 1919px) {}
+@media (max-width: 1439px) {}
+@media (max-width: 1279px) {}
+@media (max-width: 767px) {}
+*/
+/* Brand Colors ------------------------------------------------*/
+#wrapper,
+main,
+#content,
+#sidebar,
+aside,
+section {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.background {
+  min-height: 100%;
+  background-image: url("../images/img-home-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 115px;
+}
+
+.layout {
+  padding: 24px 64px;
+}
+
+header {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+}
+header .layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .layout nav ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+header .layout nav ul a {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  display: block;
+}
+header .layout .logo a {
+  position: relative;
+  display: block;
+}
+header .layout .logo .sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+header .layout .btn_box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 45px;
+}
+header .layout .btn_box .buy_box button {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+header .layout .btn_box .btn_tea {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  border-radius: 24.82px;
+  background: #7d806a;
+  color: #ffffff;
+  padding: 12px 36px;
+}
+
+footer {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  background: #dee2bd;
+}
+footer .layout {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+footer .layout h4 {
+  color: #333333;
+  font-family: "Philosopher";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+footer .layout p {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+footer .layout .footer_soc {
+  border-right: 1px solid #7d806a;
+  border-left: 1px solid #7d806a;
+  padding: 0 125px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+footer .layout .footer_soc ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+footer .layout .footer_soc ul a {
+  display: block;
+}
+footer .footer_rights {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #7d806a;
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  padding: 20px;
+}
+
+main .layout {
+  max-width: 780px;
+  width: 100%;
+  padding: 0 64px 109px;
+}
+main .layout .main_tea {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #8e6746;
+  margin-bottom: 28px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+main .layout .main_title {
+  color: #7d806a;
+  font-family: "Philosopher";
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 90px;
+  margin-bottom: 28px;
+}
+main .layout .main_text {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 48px;
+}
+main .layout .btn_tea {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  border-radius: 24.82px;
+  background: #7d806a;
+  color: #ffffff;
+  padding: 12px 36px;
+}
+
+.advantages {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  padding: 100px;
+}
+.advantages .layout {
+  display: flex;
+  flex-direction: column;
+  gap: 94px;
+}
+.advantages .layout .about_advantages {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 108px;
+}
+.advantages .layout .about_advantages .tea_group {
+  display: block;
+  position: relative;
+}
+.advantages .layout .about_advantages .tea_group .tea_cup {
+  z-index: 1000;
+  position: relative;
+  margin-left: 10%;
+}
+.advantages .layout .about_advantages .tea_group .tea_leaf {
+  position: absolute;
+}
+.advantages .layout .about_advantages .tea_group .tea_leaf:nth-child(2) {
+  bottom: 24%;
+  right: 52%;
+}
+.advantages .layout .about_advantages .tea_group .tea_leaf:nth-child(3) {
+  bottom: 16%;
+  right: 52%;
+}
+.advantages .layout .about_advantages .info_advantages h3 {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #8e6746;
+  margin-bottom: 28px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.advantages .layout .about_advantages .info_advantages h2 {
+  color: #7d806a;
+  font-family: "Philosopher";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 56px;
+  margin-bottom: 36px;
+}
+.advantages .layout .about_advantages .info_advantages p {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  max-width: 650px;
+  margin-bottom: 40px;
+}
+.advantages .layout .about_advantages .info_advantages button {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  border-radius: 24.82px;
+  background: #7d806a;
+  color: #ffffff;
+  padding: 12px 36px;
+}
+.advantages .layout .why-us_advantages {
+  margin: 0 auto;
+  text-align: center;
+}
+.advantages .layout .why-us_advantages h3 {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #8e6746;
+  margin-bottom: 28px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.advantages .layout .why-us_advantages h2 {
+  color: #7d806a;
+  font-family: "Philosopher";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 56px;
+  margin-bottom: 32px;
+}
+.advantages .layout .why-us_advantages p {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 48px;
+}
+.advantages .layout .why-us_advantages .group_advangtages {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.advantages .layout .why-us_advantages .group_advangtages .item_advantages {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.advantages .layout .why-us_advantages .group_advangtages p {
+  color: #7d806a;
+  font-family: "Philosopher";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.slider .wrapper {
+  max-width: 1200px;
+  position: relative;
+}
+.slider .wrapper .carousel {
+  white-space: nowrap;
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.slider .wrapper .carousel img {
+  height: 340px;
+  object-fit: cover;
+  width: 33.3333333333%;
+  margin-left: 14px;
+}
+.slider .wrapper .carousel img:first-child {
+  margin-left: 0;
+}
+.slider .wrapper .carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.slider .wrapper .carousel.dragging img {
+  pointer-events: none;
+}
+.slider .wrapper i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 36px;
+  width: 36px;
+  font-size: 20px;
+  color: #333;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+.slider .wrapper i#left {
+  right: 56px;
+}
+.slider .wrapper i#right {
+  right: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .slider .wrapper .carousel img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .slider .wrapper .carousel img {
+    width: 100%;
+  }
+}
