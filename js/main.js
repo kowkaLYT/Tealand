@@ -1,71 +1,180 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector(".carousel");
-    const firstImg = carousel.querySelectorAll("img")[0];
-    const arrowIcons = document.querySelectorAll(".wrapper i");
+class TeaSlider {
+    constructor() {
+        this.slides = [
+            {
+                src: './images/img-tea-first.png',
+                alt: 'Gynostemma Tea',
+                text: 'Often called asSouthern Ginseng, Gynostemma Pentaphyllum is an adaptogenic herb that helps your body manage stress while boosting energy naturally. Its sweet, earthy flavor contains compounds similar to ginseng but with more balanced effects. Regular consumption may support cardiovascular health and immune function.',
+                title: 'Gynostemma Tea'
+            },
+            {
+                src: './images/img-tea-second.png',
+                alt: 'Oolong Tea',
+                text: 'The champagne of teas, Oolong undergoes partial oxidation that creates complex floral notes with a honey-like finish. This traditional Chinese tea is prized for its metabolism-boosting properties and ability to promote healthy skin. The natural polyphenols may help regulate blood sugar levels.',
+                title: 'Oolong Tea'
+            },
+            {
+                src: './images/img-tea-third.png',
+                alt: 'Green Tea',
+                text: 'Steeped in tradition for centuries, premium green tea contains L-theanine for calm focus and EGCG for cellular protection. Our shade-grown leaves yield a vibrant emerald infusion with sweet, vegetal notes. The gentle caffeine provides clean energy without jitters, making it perfect for morning rituals.',
+                title: 'Green Tea'
+            },
+            {
+                src: './images/img-tea-fourth.png',
+                alt: 'Herbal Tea',
+                text: 'Our caffeine-free herbal infusion blends chamomile, hibiscus, and lemongrass for a naturally sweet, floral cup. This comforting blend soothes digestion after meals and promotes relaxation in the evenings. The vibrant ruby color comes from antioxidant-rich botanicals that support overall wellbeing.',
+                title: 'Herbal Tea'
+            },
+            {
+                src: './images/img-tea-first.png',
+                alt: 'Gynostemma Tea',
+                text: 'For tea enthusiasts seeking something extraordinary, our Gynostemma develops richer flavor with each steeping - revealing new layers of complexity. The rare saponins in this tea may support respiratory health and natural detoxification processes in the body.',
+                title: 'Gynostemma Reserve'
+            },
+            {
+                src: './images/img-tea-second.png',
+                alt: 'Oolong Tea',
+                text: 'Our high-mountain Oolong comes from century-old tea bushes grown in mineral-rich soil. The careful roasting process creates a creamy texture with notes of orchids and ripe peaches. Tea masters recommend this variety for its digestive benefits and mood-enhancing properties.',
+                title: 'Imperial Oolong'
+            },
+            {
+                src: './images/img-tea-third.png',
+                alt: 'Green Tea',
+                text: 'Hand-picked in early spring, these young tea leaves contain the highest concentration of amino acids for an umami-rich flavor profile. The stone-ground preparation preserves maximum nutrients, offering 10x the antioxidants of standard green tea with a smooth, brothy character.',
+                title: 'Ceremonial Matcha'
+            },
+            {
+                src: './images/img-tea-fourth.png',
+                alt: 'Herbal Tea',
+                text: 'This Ayurvedic-inspired blend combines turmeric, ginger, and holy basil for a warming, golden-hued infusion. The natural anti-inflammatory compounds may support joint health and immunity. A touch of black pepper enhances absorption of beneficial curcuminoids.',
+                title: 'Golden Chai'
+            }
+        ];
+        this.elements = {
+            slideTrack: document.querySelector('.slide__track'),
+            nextBtn: document.querySelector('.slider__btn-next'),
+            prevBtn: document.querySelector('.slider__btn-prev'),
+            modal: document.getElementById('modal'),
+            modalText: document.getElementById('modalText'),
+            closeModal: document.getElementById('closeModal')
+        };
 
-    let isDragStart = false,
-        isDragging = false,
-        prevPageX,
-        prevScrollLeft,
-        positionDiff;
+        this.state = {
+            currentIndex: 0,
+            cardWidth: 0,
+            gap: 25,
+            maxOffset: 0
+        };
 
-    const showHideIcons = () => {
-        const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-        arrowIcons[0].style.display = carousel.scrollLeft <= 0 ? "none" : "block";
-        arrowIcons[1].style.display = carousel.scrollLeft >= scrollWidth ? "none" : "block";
-    };
+        this.init();
+    }
 
-    arrowIcons.forEach(icon => {
-        icon.addEventListener("click", () => {
-            const firstImgWidth = firstImg.clientWidth + 14;
-            carousel.scrollLeft += icon.id === "left" ? -firstImgWidth : firstImgWidth;
-            setTimeout(showHideIcons, 60);
+    createSlideElement({ src, alt, text, title }) {
+        return `
+            <div class="slider__card">
+                <div class="slider__card-content">
+                    <img src="${src}" alt="${alt}">
+                    <br>
+                    <button class="open-modal" data-text="${text}">Read more</button>
+                </div>
+                <div class="slider__text">
+                    <p>${title}</p>
+                    <img src="./images/icon-bag.svg" alt="Bag Icon">
+                </div>
+            </div>
+        `;
+    }
+
+    setupSlides() {
+        const markup = this.slides.map(this.createSlideElement).join('');
+        this.elements.slideTrack.innerHTML = markup;
+
+        this.elements.slideTrack.querySelectorAll('.open-modal').forEach(btn => {
+            btn.addEventListener('click', e => this.openModal(e.target.dataset.text));
         });
-    });
+    }
 
-    const autoSlide = () => {
-        if (carousel.scrollLeft === (carousel.scrollWidth - carousel.clientWidth)) return;
-        positionDiff = Math.abs(positionDiff);
-        const firstImgWidth = firstImg.clientWidth + 14;
-        const valDifference = firstImgWidth - positionDiff;
-
-        if (carousel.scrollLeft > prevScrollLeft) {
-            carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-        } else {
-            carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+    openModal(text) {
+        if (this.elements.modal && this.elements.modalText) {
+            this.elements.modalText.textContent = text;
+            this.elements.modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
-    };
+    }
 
-    const dragStart = (e) => {
-        isDragStart = true;
-        prevPageX = e.pageX || e.touches[0].pageX;
-        prevScrollLeft = carousel.scrollLeft;
-    };
+    closeModal() {
+        if (this.elements.modal) {
+            this.elements.modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
 
-    const dragging = (e) => {
-        if (!isDragStart) return;
-        e.preventDefault();
-        isDragging = true;
-        carousel.classList.add("dragging");
-        positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-        carousel.scrollLeft = prevScrollLeft - positionDiff;
-        showHideIcons();
-    };
+    calculateDimensions() {
+        const card = this.elements.slideTrack.querySelector('.slider__card');
+        if (!card) return;
 
-    const dragStop = () => {
-        isDragStart = false;
-        carousel.classList.remove("dragging");
-        if (!isDragging) return;
-        isDragging = false;
-        autoSlide();
-    };
+        this.state.cardWidth = card.offsetWidth + this.state.gap;
+        const containerWidth = this.elements.slideTrack.parentElement.offsetWidth;
+        const totalWidth = this.slides.length * this.state.cardWidth - this.state.gap;
+        this.state.maxOffset = Math.max(0, totalWidth - containerWidth);
+    }
 
-    carousel.addEventListener("mousedown", dragStart);
-    carousel.addEventListener("touchstart", dragStart);
-    carousel.addEventListener("mousemove", dragging);
-    carousel.addEventListener("touchmove", dragging);
-    document.addEventListener("mouseup", dragStop);
-    document.addEventListener("touchend", dragStop);
+    updateNavButtons() {
+        const offset = this.state.currentIndex * this.state.cardWidth;
+        const { prevBtn, nextBtn } = this.elements;
 
-    showHideIcons();
-});
+        prevBtn.disabled = offset <= 0;
+        nextBtn.disabled = offset >= this.state.maxOffset;
+
+        [prevBtn, nextBtn].forEach(btn => {
+            btn.style.opacity = btn.disabled ? '0.6' : '1';
+            btn.style.cursor = btn.disabled ? 'not-allowed' : 'pointer';
+        });
+    }
+
+    moveToIndex(index) {
+        const offset = Math.min(index * this.state.cardWidth, this.state.maxOffset);
+        this.state.currentIndex = Math.round(offset / this.state.cardWidth);
+
+        this.elements.slideTrack.style.transition = 'transform 0.4s ease-in-out';
+        this.elements.slideTrack.style.transform = `translateX(-${offset}px)`;
+
+        this.updateNavButtons();
+    }
+
+    setupEventListeners() {
+        const { nextBtn, prevBtn, modal, closeModal } = this.elements;
+
+        nextBtn?.addEventListener('click', () => this.moveToIndex(this.state.currentIndex + 1));
+        prevBtn?.addEventListener('click', () => this.moveToIndex(this.state.currentIndex - 1));
+        closeModal?.addEventListener('click', () => this.closeModal());
+
+        modal?.addEventListener('click', e => {
+            if (e.target === modal) this.closeModal();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && modal?.classList.contains('active')) {
+                this.closeModal();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            this.calculateDimensions();
+            this.moveToIndex(this.state.currentIndex);
+        });
+    }
+
+    init() {
+        this.setupSlides();
+
+        setTimeout(() => {
+            this.calculateDimensions();
+            this.updateNavButtons();
+        }, 100);
+
+        this.setupEventListeners();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => new TeaSlider());

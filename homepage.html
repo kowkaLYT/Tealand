@@ -112,18 +112,51 @@
 				</div>
 			</section>
 			<section class="slider" id="slider">
-				<h3 class="slider-title">Our Unique Tea Blends</h3>
-				<div class="wrapper">
-					<i id="left" class="fa-solid fa-angle-left"></i>
-					<i id="right" class="fa-solid fa-angle-right"></i>
-					<div class="carousel">
-						<img src="./images/img-tea-first.png" alt="Tealand Tea" draggable="false">
-						<img src="./images/img-tea-second.png" alt="Tealand Tea" draggable="false">
-						<img src="./images/img-tea-third.png" alt="Tealand Tea" draggable="false">
-						<img src="./images/img-tea-fifth.png" alt="Tealand Tea" draggable="false">
-						<img src="./images/img-tea-sixth.png" alt="Tealand Tea" draggable="false">
-						<img src="./images/img-tea-seventh.png" alt="Tealand Tea" draggable="false">
-						<img src="./images/img-tea-ninth.png" alt="Tealand Tea" draggable="false">
+				<div class="slider__container">
+					<h3 class="slider__title">Our Unique Tea Blends</h3>
+					<div class="slider__nav">
+						<button class="slider__btn-prev">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								width="20.000000" height="17.000000" viewBox="0 0 20 17" fill="none">
+								<path id="arrow"
+									d="M20 8.5C20 9.17 19.44 9.71 18.75 9.71L4.26 9.71L9.63 14.92C10.12 15.4 10.12 16.17 9.63 16.64C9.14 17.11 8.35 17.11 7.86 16.64L0.36 9.35C-0.13 8.88 -0.13 8.11 0.36 7.64L7.86 0.35C8.35 -0.12 9.14 -0.12 9.63 0.35C10.12 0.82 10.12 1.59 9.63 2.07L4.26 7.28L18.75 7.28C19.44 7.28 20 7.82 20 8.5Z"
+									fill="#333333" fill-opacity="1.000000" fill-rule="evenodd" />
+							</svg>
+						</button>
+						<button class="slider__btn-next"><svg xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="17.000000"
+								viewBox="0 0 20 17" fill="none">
+								<path id="arrow"
+									d="M0 8.5C0 9.17 0.55 9.71 1.25 9.71L15.73 9.71L10.36 14.92C9.87 15.4 9.87 16.17 10.36 16.64C10.85 17.11 11.64 17.11 12.13 16.64L19.63 9.35C20.12 8.88 20.12 8.11 19.63 7.64L12.13 0.35C11.64 -0.12 10.85 -0.12 10.36 0.35C9.87 0.82 9.87 1.59 10.36 2.07L15.73 7.28L1.25 7.28C0.55 7.28 0 7.82 0 8.5Z"
+									fill="#333333" fill-opacity="1.000000" fill-rule="evenodd" />
+							</svg></button>
+					</div>
+					<div class="slider__window">
+						<div class="slide__track"></div>
+					</div>
+				</div>
+				<div class="modal" id="modal">
+					<div class="modal__content">
+						<div class="modal__content-top">
+							<span id="closeModal">&times;</span>
+							<svg class="tea" width="37" height="48" viewBox="0 0 37 48" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z"
+									stroke="var(--secondary)" stroke-width="2" />
+								<path
+									d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34"
+									stroke="var(--secondary)" stroke-width="2" />
+								<path id="teabag" fill="var(--secondary)" fill-rule="evenodd" clip-rule="evenodd"
+									d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z" />
+								<path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" stroke="var(--secondary)" />
+								<path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13"
+									stroke="var(--secondary)" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</div>
+						<p id="modalText"></p>
 					</div>
 				</div>
 			</section>
