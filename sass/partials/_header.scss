@@ -20,7 +20,7 @@ header {
 			}
 		}
 
-		.logo {
+		.header__logo {
 			a {
 				position: relative;
 				display: block;
@@ -41,13 +41,13 @@ header {
 			}
 		}
 
-		.btn_box {
+		.header__box-btn {
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
 			gap: 45px;
 
-			.buy_box {
+			.header__buy-box {
 				button {
 					@include simple_text;
 					background: none;
@@ -57,7 +57,7 @@ header {
 				}
 			}
 
-			.btn_tea {
+			.header__btn-tea {
 				@include button_green;
 			}
 		}

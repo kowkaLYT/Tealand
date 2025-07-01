@@ -7,39 +7,39 @@
         flex-direction: column;
         gap: 94px;
 
-        .about_advantages {
+        .about__advantages {
             display: flex;
             position: relative;
             justify-content: center;
             gap: 108px;
 
-            .tea_group {
+            .about__tea-group {
                 display: block;
                 position: relative;
 
-                .tea_cup {
+                .about__tea-cup {
                     z-index: 1000;
                     position: relative;
                     margin-left: 10%;
                 }
 
-                .tea_leaf {
+                .about__tea-leaf {
                     position: absolute;
 
                 }
 
-                .tea_leaf:nth-child(2) {
+                .about__tea-leaf:nth-child(2) {
                     bottom: 24%;
                     right: 52%;
                 }
 
-                .tea_leaf:nth-child(3) {
+                .about__tea-leaf:nth-child(3) {
                     bottom: 16%;
                     right: 52%;
                 }
             }
 
-            .info_advantages {
+            .info__advantages {
                 h3 {
                     @include brown_title;
                 }
@@ -66,7 +66,7 @@
 
         }
 
-        .why-us_advantages {
+        .why-us__advantages {
             margin: 0 auto;
             text-align: center;
 
@@ -89,13 +89,13 @@
                 margin-bottom: 48px;
             }
 
-            .group_advangtages {
+            .group__advangtages {
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
                 justify-content: space-around;
 
-                .item_advantages {
+                .item__advantages {
                     display: flex;
                     align-items: center;
                     flex-direction: column;

@@ -4,11 +4,11 @@ main {
         width: 100%;
         padding: 0 64px 109px;
 
-        .main_tea {
+        .main__tea {
            @include brown_title;
         }
 
-        .main_title {
+        .main__title {
             color: #7d806a;
             font-family: 'Philosopher';
             font-size: 80px;
@@ -18,14 +18,14 @@ main {
 
         }
 
-        .main_text {
+        .main__text {
             @include simple_text;
             font-weight: 300;
             line-height: 30px;
             margin-bottom: 48px;
         }
 
-        .btn_tea {
+        .main__btn-tea {
             @include button_green;
         }
     }

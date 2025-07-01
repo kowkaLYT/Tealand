@@ -1,3 +1,4 @@
+//Slider Tea Cards
 class TeaSlider {
     constructor() {
         this.slides = [

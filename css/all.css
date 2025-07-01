@@ -142,11 +142,11 @@ header .layout nav ul a {
   line-height: 23px;
   display: block;
 }
-header .layout .logo a {
+header .layout .header__logo a {
   position: relative;
   display: block;
 }
-header .layout .logo .sr_only {
+header .layout .header__logo .sr_only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -157,13 +157,13 @@ header .layout .logo .sr_only {
   white-space: nowrap;
   border: 0;
 }
-header .layout .btn_box {
+header .layout .header__box-btn {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 45px;
 }
-header .layout .btn_box .buy_box button {
+header .layout .header__box-btn .header__buy-box button {
   color: #333333;
   font-family: "Roboto";
   font-size: 20px;
@@ -174,7 +174,7 @@ header .layout .btn_box .buy_box button {
   align-items: center;
   gap: 12px;
 }
-header .layout .btn_box .btn_tea {
+header .layout .header__box-btn .header__btn-tea {
   color: #333333;
   font-family: "Roboto";
   font-size: 20px;
@@ -221,7 +221,7 @@ footer .layout p {
   margin-bottom: 10px;
   text-align: center;
 }
-footer .layout .footer_soc {
+footer .layout .footer__soc {
   border-right: 1px solid #7d806a;
   border-left: 1px solid #7d806a;
   padding: 0 125px;
@@ -229,16 +229,16 @@ footer .layout .footer_soc {
   flex-direction: column;
   gap: 32px;
 }
-footer .layout .footer_soc ul {
+footer .layout .footer__soc ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 40px;
 }
-footer .layout .footer_soc ul a {
+footer .layout .footer__soc ul a {
   display: block;
 }
-footer .footer_rights {
+footer .footer__rights {
   display: flex;
   justify-content: center;
   border-top: 1px solid #7d806a;
@@ -255,7 +255,7 @@ main .layout {
   width: 100%;
   padding: 0 64px 109px;
 }
-main .layout .main_tea {
+main .layout .main__tea {
   color: #333333;
   font-family: "Roboto";
   font-size: 20px;
@@ -266,7 +266,7 @@ main .layout .main_tea {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
-main .layout .main_title {
+main .layout .main__title {
   color: #7d806a;
   font-family: "Philosopher";
   font-size: 80px;
@@ -274,7 +274,7 @@ main .layout .main_title {
   line-height: 90px;
   margin-bottom: 28px;
 }
-main .layout .main_text {
+main .layout .main__text {
   color: #333333;
   font-family: "Roboto";
   font-size: 20px;
@@ -284,7 +284,7 @@ main .layout .main_text {
   line-height: 30px;
   margin-bottom: 48px;
 }
-main .layout .btn_tea {
+main .layout .main__btn-tea {
   color: #333333;
   font-family: "Roboto";
   font-size: 20px;
@@ -310,33 +310,33 @@ main .layout .btn_tea {
   flex-direction: column;
   gap: 94px;
 }
-.advantages .layout .about_advantages {
+.advantages .layout .about__advantages {
   display: flex;
   position: relative;
   justify-content: center;
   gap: 108px;
 }
-.advantages .layout .about_advantages .tea_group {
+.advantages .layout .about__advantages .about__tea-group {
   display: block;
   position: relative;
 }
-.advantages .layout .about_advantages .tea_group .tea_cup {
+.advantages .layout .about__advantages .about__tea-group .about__tea-cup {
   z-index: 1000;
   position: relative;
   margin-left: 10%;
 }
-.advantages .layout .about_advantages .tea_group .tea_leaf {
+.advantages .layout .about__advantages .about__tea-group .about__tea-leaf {
   position: absolute;
 }
-.advantages .layout .about_advantages .tea_group .tea_leaf:nth-child(2) {
+.advantages .layout .about__advantages .about__tea-group .about__tea-leaf:nth-child(2) {
   bottom: 24%;
   right: 52%;
 }
-.advantages .layout .about_advantages .tea_group .tea_leaf:nth-child(3) {
+.advantages .layout .about__advantages .about__tea-group .about__tea-leaf:nth-child(3) {
   bottom: 16%;
   right: 52%;
 }
-.advantages .layout .about_advantages .info_advantages h3 {
+.advantages .layout .about__advantages .info__advantages h3 {
   color: #333333;
   font-family: "Roboto";
   font-size: 20px;
@@ -347,7 +347,7 @@ main .layout .btn_tea {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
-.advantages .layout .about_advantages .info_advantages h2 {
+.advantages .layout .about__advantages .info__advantages h2 {
   color: #7d806a;
   font-family: "Philosopher";
   font-size: 50px;
@@ -355,7 +355,7 @@ main .layout .btn_tea {
   line-height: 56px;
   margin-bottom: 36px;
 }
-.advantages .layout .about_advantages .info_advantages p {
+.advantages .layout .about__advantages .info__advantages p {
   color: #333333;
   font-family: "Roboto";
   font-size: 20px;
@@ -364,7 +364,7 @@ main .layout .btn_tea {
   max-width: 650px;
   margin-bottom: 40px;
 }
-.advantages .layout .about_advantages .info_advantages button {
+.advantages .layout .about__advantages .info__advantages button {
   color: #333333;
   font-family: "Roboto";
   font-size: 20px;
@@ -375,11 +375,11 @@ main .layout .btn_tea {
   color: #ffffff;
   padding: 12px 36px;
 }
-.advantages .layout .why-us_advantages {
+.advantages .layout .why-us__advantages {
   margin: 0 auto;
   text-align: center;
 }
-.advantages .layout .why-us_advantages h3 {
+.advantages .layout .why-us__advantages h3 {
   color: #333333;
   font-family: "Roboto";
   font-size: 20px;
@@ -391,7 +391,7 @@ main .layout .btn_tea {
   text-transform: uppercase;
   margin-bottom: 28px;
 }
-.advantages .layout .why-us_advantages h2 {
+.advantages .layout .why-us__advantages h2 {
   color: #7d806a;
   font-family: "Philosopher";
   font-size: 50px;
@@ -399,7 +399,7 @@ main .layout .btn_tea {
   line-height: 56px;
   margin-bottom: 32px;
 }
-.advantages .layout .why-us_advantages p {
+.advantages .layout .why-us__advantages p {
   color: #333333;
   font-family: "Roboto";
   font-size: 20px;
@@ -407,20 +407,20 @@ main .layout .btn_tea {
   line-height: 30px;
   margin-bottom: 48px;
 }
-.advantages .layout .why-us_advantages .group_advangtages {
+.advantages .layout .why-us__advantages .group__advangtages {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.advantages .layout .why-us_advantages .group_advangtages .item_advantages {
+.advantages .layout .why-us__advantages .group__advangtages .item__advantages {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 48px;
   flex-wrap: wrap;
 }
-.advantages .layout .why-us_advantages .group_advangtages p {
+.advantages .layout .why-us__advantages .group__advangtages p {
   color: #7d806a;
   font-family: "Philosopher";
   font-size: 30px;
