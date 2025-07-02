@@ -1,0 +1,45 @@
+.tea {
+    background-color: #EEF0DC;
+    margin-top: 200px;
+    overflow: visible;
+
+    .layout {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 90px 100px;
+
+        .tea__pros {
+            display: flex;
+            flex-direction: column;
+            gap: 172px;
+
+            .tea__pros-item {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                color: #333333;
+                font-family: 'Roboto';
+                font-size: 30px;
+                font-weight: 500;
+                line-height: 35px;
+            }
+        }
+    }
+
+    .tea__image-box {
+        position: absolute;
+        bottom: 25%;
+        left: 37%;
+        .tea__image-bag{
+            position: relative;
+            z-index: 1;
+        }
+        .tea__image-seeds{
+            position: absolute;
+            z-index: 1000;
+            top: 65%;
+            left: 35%;
+        }
+    }
+}

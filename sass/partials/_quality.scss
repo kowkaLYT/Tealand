@@ -1,0 +1,50 @@
+.quality {
+    margin: 84px auto;
+
+    .layout {
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 80px;
+
+        .quality__images {
+            display: flex;
+            gap: 60px;
+        }
+
+        .quality__text {
+            max-width: 554px;
+            width: 100%;
+
+            .quality__text-box {
+                h4 {
+                    @include green_subtitle;
+                    font-size: 30px
+                }
+
+                p {
+                    @include green_small_text;
+                }
+            }
+        }
+    }
+
+    .quality__title {
+        text-align: center;
+        margin-top: 96px;
+
+        h3 {
+            @include brown_title;
+        }
+
+        h2 {
+            @include green_subtitle;
+        }
+    }
+
+    .quality__leaf-img {
+        position: absolute;
+        bottom: 2%;
+        right: -9%;
+    }
+}

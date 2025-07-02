@@ -708,3 +708,105 @@ main .layout .main__btn-tea {
   top: 40%;
   left: -8%;
 }
+
+.quality {
+  margin: 84px auto;
+}
+.quality .layout {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 80px;
+}
+.quality .layout .quality__images {
+  display: flex;
+  gap: 60px;
+}
+.quality .layout .quality__text {
+  max-width: 554px;
+  width: 100%;
+}
+.quality .layout .quality__text .quality__text-box h4 {
+  color: #7d806a;
+  font-family: "Philosopher";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 56px;
+  font-size: 30px;
+}
+.quality .layout .quality__text .quality__text-box p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #333;
+}
+.quality .quality__title {
+  text-align: center;
+  margin-top: 96px;
+}
+.quality .quality__title h3 {
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #8e6746;
+  margin-bottom: 28px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.quality .quality__title h2 {
+  color: #7d806a;
+  font-family: "Philosopher";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 56px;
+}
+.quality .quality__leaf-img {
+  position: absolute;
+  bottom: 2%;
+  right: -9%;
+}
+
+.tea {
+  background-color: #EEF0DC;
+  margin-top: 200px;
+  overflow: visible;
+}
+.tea .layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 100px;
+}
+.tea .layout .tea__pros {
+  display: flex;
+  flex-direction: column;
+  gap: 172px;
+}
+.tea .layout .tea__pros .tea__pros-item {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  color: #333333;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 35px;
+}
+.tea .tea__image-box {
+  position: absolute;
+  bottom: 25%;
+  left: 37%;
+}
+.tea .tea__image-box .tea__image-bag {
+  position: relative;
+  z-index: 1;
+}
+.tea .tea__image-box .tea__image-seeds {
+  position: absolute;
+  z-index: 1000;
+  top: 65%;
+  left: 35%;
+}
